@@ -46,10 +46,6 @@ function Shell() {
     );
 }
 
-function InventoriesPage() {
-    return <h1 className="h4 m-0">Inventories list</h1>;
-}
-
 function InventoryDetailPage() {
     const { inventoryId } = useParams();
     return <h1 className="h4 m-0">Inventory detail: {inventoryId}</h1>;

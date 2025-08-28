@@ -1,5 +1,5 @@
-import { useMemo, useState, useId } from "react";
-import { BrowserRouter, Routes, Route, Link, useNavigate, useParams, NavLink } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -16,7 +16,6 @@ import Dropdown from "react-bootstrap/Dropdown";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Stack from "react-bootstrap/Stack";
 import Alert from "react-bootstrap/Alert";
-import Pagination from "react-bootstrap/Pagination";
 
 // =====================
 // Types
@@ -167,7 +166,6 @@ function ActionMenu({ onEdit, onDelete }: { onEdit: () => void; onDelete: () => 
 
 
 export default function InventoryPage() {
-    const navigate = useNavigate();
     const owned = useMemo(() => MOCK_INVENTORIES.filter((i) => i.ownerId === currentUserId), []);
     const write = useMemo(() => MOCK_INVENTORIES.filter((i) => i.writeUsers.includes(currentUserId) && i.ownerId !== currentUserId), []);
 
