@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet, useParams, useSearchParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import NavbarSearch from "./Navbar";
 import HomePage from '../pages/HomePage'
