@@ -10,7 +10,7 @@ export default function AppRouter() {
             <Routes>
                 <Route element={<Shell />}>
                     <Route index element={<HomePage />} />
-                    <Route path="inventory" element={<InventoryPage />} />
+                    <Route path="/inventory" element={<InventoryPage />} />
                     <Route path="/inventory/:id" element={<InventoryTabs />} />
                     <Route path="/inventory/:id/items/new" element={<Container className="py-4"><h2 className="h4">New Item (mock)</h2></Container>} />
                     <Route path="/inventory/:id/items/:itemId" element={<Container className="py-4"><h2 className="h4">Item Details (mock)</h2></Container>} />
