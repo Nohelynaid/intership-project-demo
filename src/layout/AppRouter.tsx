@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import NavbarSearch from "./Navbar";
-import HomePage from '../pages/HomePage'
-import InventoryPage, { InventoryTabs } from "../pages/InventoryPage/InventoryPage";
+import HomePage from '../pages/HomePage/HomePage'
+import InventoryPage from "../pages/InventoryPage/InventoryPage";
+import InventoryTabs from "../pages/InventoryPage/InventoryTabs";
 
 export default function AppRouter() {
     return (
