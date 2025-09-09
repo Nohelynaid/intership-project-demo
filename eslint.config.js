@@ -16,7 +16,10 @@ export default tseslint.config([
       reactRefresh.configs.vite,
     ],
     rules: {
-      "@typescript-eslint/no-explicit-any": "off"
+      "@typescript-eslint/no-explicit-any": "off",
+      "react-refresh/only-export-components": "off",
+      "@typescript-eslint/no-unsafe-function-type": "off",
+      "@typescript-eslint/no-unused-vars": "off"
     },
     languageOptions: {
       ecmaVersion: 2020,

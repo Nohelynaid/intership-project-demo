@@ -9,19 +9,18 @@ export default function FieldsTab({ id, data, editable, loadFields }: { data: Fi
 
     const update = (i: number, patch: Partial<Field>) => setFields((f) => f.map((x, idx) => (idx === i ? { ...x, ...patch } : x)));
     const add = () => setFields((f) => [...f, { ...blank }]);
-    const remove = (i: number) => setFields((f) => f.filter((_, idx) => idx !== i));
 
     const execute = async () => {
         const toCreate = fields.filter(f => f.id === "").map(({ optionsString, id, ...rest }) => rest).map(f => ({ ...f, inventoryId: id }));
-        const toUpdate = fields.filter(f => f.id !== "").map(({ optionsString, id, ...rest }) => rest).map(f => ({ ...f, inventoryId: id }));
+        // const toUpdate = fields.filter(f => f.id !== "").map(({ optionsString, id, ...rest }) => rest).map(f => ({ ...f, inventoryId: id }));
 
         if (toCreate.length > 0) {
             await createFields(toCreate);
         }
 
-        if (toUpdate.length > 0) {
+        // if (toUpdate.length > 0) {
 
-        }
+        // }
 
         loadFields();
     }
